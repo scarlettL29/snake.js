@@ -6,7 +6,7 @@
 function Snake(field = { x: 20, y: 20 }) {
   this.field = field;
   this.respawn();
-}
+} 
 
 /**
  * Return the positions of the snake

@@ -69,7 +69,7 @@ Game.prototype.update = function(self) {
   if (self.snake.isOn(self.apple)) {
     self.snake.grow();
     self.generateRandomApple();
-    self.score += 100;
+    self.score += 1;
     self.graphic.setScore(self.score);
   }
   self.graphic.draw(self.snake.get());
