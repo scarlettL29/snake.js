@@ -1,6 +1,6 @@
 function Game(canvasId) {
   this.field = { x: 20, y: 20 };
-  this.blockSize = { x: 20, y: 20 };
+  this.blockSize = { x: 30, y: 30 };
   this.graphic = new SnakeGraphic(canvasId, this.field, this.blockSize, 100);
   var self = this;
   document.addEventListener('keydown', function(ev) {
@@ -27,7 +27,7 @@ function Game(canvasId) {
 }
 
 Game.prototype.start = function() {
-  setInterval(this.update, 100, this);
+  setInterval(this.update, 1, this);
 };
 
 Game.prototype.generateRandomApple = function() {
