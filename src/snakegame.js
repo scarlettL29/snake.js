@@ -1,6 +1,6 @@
 function Game(canvasId) {
   this.field = { x: 20, y: 20 };
-  this.blockSize = { x: 20, y: 20 };
+  this.blockSize = { x: 30, y: 30 };
   this.graphic = new SnakeGraphic(canvasId, this.field, this.blockSize, 100);
   var self = this;
   document.addEventListener('keydown', function(ev) {
@@ -69,7 +69,7 @@ Game.prototype.update = function(self) {
   if (self.snake.isOn(self.apple)) {
     self.snake.grow();
     self.generateRandomApple();
-    self.score += 100;
+    self.score += 1;
     self.graphic.setScore(self.score);
   }
   self.graphic.draw(self.snake.get());

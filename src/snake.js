@@ -6,7 +6,7 @@
 function Snake(field = { x: 20, y: 20 }) {
   this.field = field;
   this.respawn();
-}
+} 
 
 /**
  * Return the positions of the snake
@@ -106,6 +106,7 @@ Snake.prototype.respawn = function() {
 Snake.prototype.isAlive = function() {
   return this.alive;
 };
+
 
 /**
  * Return true if the snake is dead, false otherwise
