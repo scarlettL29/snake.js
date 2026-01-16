@@ -48,6 +48,12 @@ Snake.prototype.move = function() {
   this.checkDeath();
 };
 
+
+
+
+
+
+
 /**
  * Grow the snake by one
  */
@@ -156,3 +162,5 @@ function getRandomDirection() {
 
   return { x: x, y: y };
 }
+
+
