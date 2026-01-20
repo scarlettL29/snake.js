@@ -52,6 +52,23 @@ Snake.prototype.move = function() {
 
 
 
+function update() {
+    snake.move();
+
+    if (snake.isDead()) {
+        // This line makes the pop-up appear
+        document.getElementById("good").style.display = "flex";
+        return; // Stop moving the snake
+    }
+    
+    // ... rest of your drawing code ...
+}
+
+
+
+
+
+
 
 
 /**

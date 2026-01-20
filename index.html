@@ -18,7 +18,8 @@
 
 <div id="good" class="welcome" >
     <div class="welcome-box">
-     <h1> <div class="book">Game Over!</div></h1>
+     <h1> <div class="bo
+      ok">Game Over!</div></h1>
          <button id="closeButton">Close & restart</button>
      </div>
 </div>
@@ -26,4 +27,30 @@
       </div>
     </div>
   </body>
+
+  <script>
+  const good = document.getElementById("good");
+  const closeButton = document.getElementById("closeButton");
+        
+
+  function hide() {
+      good.style.display = "none"; 
+  }
+
+  closeButton.addEventListener("click", hide);
+
+  good.addEventListener("click", function(e) {
+      if (e.target === good) {
+          hide();
+      }
+  });
+
+
+  closeButton.addEventListener("click", function() {
+    document.getElementById("good").style.display = "none"; // Hide it again
+    snake.respawn(); // Reset the snake
+    // If you use a timer, restart it here
+});
+  </script>
+
 </html>
