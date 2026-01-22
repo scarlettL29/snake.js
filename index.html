@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -14,43 +14,31 @@
 
   <body>
     <canvas id="game"></canvas>
-    
 
-<div id="good" class="welcome" >
-    <div class="welcome-box">
-     <h1> <div class="bo
-      ok">Game Over!</div></h1>
-         <button id="closeButton">Close & restart</button>
-     </div>
-</div>
-
+    <div id="good" class="welcome" hidden>
+      <div class="welcome-box">
+        <h1><div class="book">Game over!</div></h1>
+        <button id="closeButton">Close & restart</button>
       </div>
     </div>
-  </body>
+    <script>
+      const good = document.getElementById('good');
+      const closeButton = document.getElementById('closeButton');
 
-  <script>
-  const good = document.getElementById("good");
-  const closeButton = document.getElementById("closeButton");
-        
-
-  function hide() {
-      good.style.display = "none"; 
-  }
-
-  closeButton.addEventListener("click", hide);
-
-  good.addEventListener("click", function(e) {
-      if (e.target === good) {
-          hide();
+      function hide() {
+        good.hidden = true;
       }
-  });
 
+      window.hide = hide;
 
-  closeButton.addEventListener("click", function() {
-    document.getElementById("good").style.display = "none"; // Hide it again
-    snake.respawn(); // Reset the snake
-    // If you use a timer, restart it here
-});
-  </script>
+      function show() {
+        good.hidden = false;
+      }
 
+      window.show = show;
+      
+
+      closeButton.addEventListener('click', hide);
+    </script>
+  </body>
 </html>

@@ -65,6 +65,7 @@ Game.prototype.update = function(self) {
     self.score = 0;
     self.graphic.reset();
     self.snake.respawn();
+    window.show();
   }
   if (self.snake.isOn(self.apple)) {
     self.snake.grow();
